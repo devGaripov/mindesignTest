@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+    <select formControlName="category">
+        <option value="">Все категории</option>
+        <option *ngFor="let category of categories" [value]="category">{{category}}
+        </option>
+    </select>
+    <select formControlName="company">
+        <option value="">Все вхождения</option>
+        <option *ngFor="let company of companyStats" [value]="company.id">{{company.name}}
+        </option>
+    </select>
+</form>

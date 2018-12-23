@@ -1,0 +1,10 @@
+<ng-container *ngIf="companyStats$">
+    <app-company-filters [companyStats]="companyStats$ | async"
+                         (categoryFilter)="categoryFilter($event)"
+                         (companyFilter)="companyFilter($event)">
+    </app-company-filters>
+    <app-company-stats [selectedCompanyId]="selectedCompanyId$ | async"
+                       [companyStats]="companyStats$ | async"
+                       (onItemSelected)="onItemSelected($event)">
+    </app-company-stats>
+</ng-container>
